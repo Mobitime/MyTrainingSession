@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".TrainingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Фитнес У Рокки"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvExerciseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Упражнение"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifExerciseImage"
+        android:layout_width="290dp"
+        android:layout_height="287dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvExerciseInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Инструкция к упражнению"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="30 секунд"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnStartExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Начать тренировку"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnNextExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перейти к следующему упражнению"
+        android:layout_marginTop="16dp"
+        android:enabled="false"/>
+
+</LinearLayout>
